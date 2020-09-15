@@ -1,0 +1,27 @@
+---
+title: "ex1b"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Exercise 1.b of sta426. We take 100 samples from a log-normal distribution with mean 1 and variance 0.25.
+
+```{r log-normal distribution}
+samples <- rlnorm(100, meanlog = 0, sdlog = .25) #mean should be 1, so meanlog is 0
+```
+
+## Including Plots
+
+Histogram produced by the samples. The samples have the following mean and variance.
+
+mean : 1.032939
+variance : 0.06516552
+
+```{r plot}
+hist(samples)
+```
